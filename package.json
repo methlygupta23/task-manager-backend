@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "build": "npm ci"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "repository": {
     "type": "git",

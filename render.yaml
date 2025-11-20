@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: task-manager-backend
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+    # Uncomment and configure if using PostgreSQL
+    # databases:
+    #   - name: task-manager-db
+    #     databaseName: task_manager
+    #     user: postgres
+    #     plan: free
