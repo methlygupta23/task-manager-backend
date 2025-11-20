@@ -14,6 +14,18 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Task Manager Backend API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      tasks: '/api/tasks'
+    }
+  });
+});
+
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
